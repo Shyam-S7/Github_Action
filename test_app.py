@@ -2,7 +2,6 @@ from app import app
 
 
 def test_home():
-    response = app.test_client().get("/")
-
+    response = app.test_client().get("/home")
     assert response.status_code == 200
-    assert response.data == b"hi everyone"
+    assert response.data == b"hello everyone"
